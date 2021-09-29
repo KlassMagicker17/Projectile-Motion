@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Motion</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="move()" onresize="move()">
+    <canvas id="cvs"></canvas>
+	<form oninput="move()">
+		<input type="range" id="angle" min=-180 max=180 value=0 step="0.5">
+		<p name="aglP">angle</p><br>
+
+		<input type="range" id="velocity" min=0 max=150 value=50 step="0.5">
+		<p name="vlcP">velocity</p><br>
+
+		<input type="range" id="gravity" min=-30 max=30 value=-10 step="0.5">
+		<p name="grvP">gravity</p><br>
+
+		<input type="range" id="iteration" min=0 max=200 value=5 step="1">
+		<p name="itP">iterations</p><br>
+
+		<input type="range" id="tmeInt" min=0 max=5 value=1 step="0.1">
+		<p name="tIntP">time interval</p><br>
+
+		<input type="range" id="radius" min=1 max=100 value=20 step="0.5">
+		<p name="rP">Circle size</p><br>
+
+		<input type="radio" id="normal" name="modes" value="nrm" checked>
+		<label for="normal">Show All</label><br>
+		<input type="radio" id="moving" name="modes" value="mve">
+		<label for="move">Moving</label><br>
+	</form>
+
+	<div>
+		<p>
+			<span name="aglP"></span> </br>
+			<span name="vlcP"></span> </br>
+			<span name="grvP"></span> </br>
+			<span name="itP"></span> </br>
+			<span name="tIntP"></span> </br>
+			<span name="rP"></span> </br>
+			<span id="mode"></span> </br>
+		</p>
+	</div>
+</body>
+</html>
